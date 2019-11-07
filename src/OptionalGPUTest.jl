@@ -6,7 +6,7 @@ export DefaultArray, mul2!, gpu_allowscalar
 
 __init__() = global DefaultArray = CuArrays.functional() ? CuArray : Array
 
-gpu_allowscalar(x) = CUDAapi.has_cuda() ? CuArrays.allowscalar(x) : nothing
+gpu_allowscalar(x) = CuArrays.allowscalar(x)
 
 device(::AbstractArray) = CPU()
 device(::CuArray) = CUDA()
